@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useLocation } from "wouter"
 import './styles.css'
 
-const POPULAR_GIFS = ["Matrix", "Chile", "Colombia", "Ecuador"]
+const POPULAR_GIFS = ["Matrix", "Chile", "Colombia", "Ecuador", "Rick"]
 
 export default function Home() {
 
@@ -22,8 +22,8 @@ export default function Home() {
       <h4 className="App-title">Los gifs más populares</h4>
       <ul>
         {POPULAR_GIFS.map((popularGif) => (
-          <li key={popularGif}>
-            <Link to={`/search/${popularGif}`}>Gifs de {popularGif}</Link>
+          <li className='popular-gifs' key={popularGif}>
+            <Link className='popular-gifs-links' to={`/search/${popularGif}`}>Gifs de {popularGif}</Link>
           </li>
         ))}
       </ul>

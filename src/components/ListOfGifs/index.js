@@ -2,6 +2,7 @@ import React from "react";
 import Gif from '../Gif';
 import { Link } from 'wouter';
 import './styles.css'
+
 export default function ListOfGifs({ params }) {
 
   return <div>
