@@ -1,0 +1,13 @@
+.btn-detalle {
+    height: 3vh;
+    border-radius: 3%;
+    margin-top: 10px;
+    font-size: 25px;
+    background-color: cadetblue;
+    text-decoration-style: wavy;
+    color: white;
+}
+
+.btn-detalle:hover {
+    cursor: pointer;
+  }

@@ -1,0 +1,31 @@
+.App-title {
+  color: #8d5aa4;
+  max-height: 10px;
+}
+
+.App-logo {
+  object-fit: contain;
+  height: 250px;
+}
+
+.btn-buscar {
+  height: 3vh;
+  border-radius: 3%;
+  margin-top: 10px;
+  font-size: 25px;
+  background-color: cadetblue;
+  text-decoration-style: wavy;
+  color: white;
+}
+
+.btn-buscar:hover {
+  cursor: pointer;
+}
+
+.input-keyword {
+  height: 2vh;
+  border-radius: 3%;
+  font-size: 15px;
+  text-decoration-style: wavy;
+
+}
