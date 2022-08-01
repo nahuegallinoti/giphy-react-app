@@ -1,19 +1,21 @@
 import React from "react";
-import Gif from '../Gif';
-import { Link } from 'wouter';
-import './styles.css'
+import Gif from "components/Gif";
+import "./styles.css";
 
 export default function ListOfGifs({ params }) {
-
-  return <div>
-    {
-      params.map((gif) =>
-        <div>
-          <Gif key={gif.id} params={gif}></Gif>
-          <Link to={`/detalle/${gif.id}`} className='Gif-link'>
-            <button className='btn-detalle'>Detalle</button></Link>
+  return (
+    <div className="gif-container">
+      {params.map((gif) => (
+        <div key={gif.id}>
+          <Gif
+            key={gif.id}
+            id={gif.id}
+            title={gif.title}
+            url={gif.url}
+            detalle={false}
+          ></Gif>
         </div>
-      )
-    }
-  </div>
+      ))}
+    </div>
+  );
 }

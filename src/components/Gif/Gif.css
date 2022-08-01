@@ -1,18 +1,39 @@
 .Gif {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 6px;
-    display: flex;
     margin: 10px;
-    width: 100%;
     padding: 32px;
-    flex-direction: column;
     text-decoration: none;
-}
-
-.Gif h4 {
-    margin: 1px 10px 20px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 20vh;
 }
 
 .Gif img {
     object-fit: contain;
+}
+
+.image-gif:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: 25px;
+}
+
+.btn-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: rgb(121, 214, 217);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
 }

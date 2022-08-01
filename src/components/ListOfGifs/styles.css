@@ -1,13 +1,29 @@
 .btn-detalle {
-    height: 3vh;
-    border-radius: 3%;
-    margin-top: 10px;
-    font-size: 25px;
-    background-color: cadetblue;
-    text-decoration-style: wavy;
-    color: white;
+  height: 3vh;
+  border-radius: 3%;
+  margin-top: 10px;
+  font-size: 25px;
+  background-color: cadetblue;
+  text-decoration-style: wavy;
+  color: white;
 }
 
 .btn-detalle:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
+
+.gif-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.gif-container>* {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 3vh;
+}

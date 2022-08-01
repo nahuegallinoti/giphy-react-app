@@ -1,31 +1,24 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import getGifById from '../../services/getGifById';
-import Gif from '../../components/Gif';
-import Spinner from '../../components/Spinner';
+import React from "react";
+import Gif from "components/Gif/index.js";
+import useGlobalGifs from "hooks/globalGifs.js";
+import "./styles.css";
+import Search from "components/Search";
 
+export default function Detail({ params }) {
+  const gifs = useGlobalGifs();
 
-export default function DetalleGif ({ params }) {
-  const [gif, setGif] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const gif = gifs.find((gif) => gif.id === params.id) || undefined;
 
-  const { id } = params;
-
-  useEffect(function () {
-    setLoading(true)
-
-    getGifById({ id }).then(gif => {
-      gif.url = gif.images.downsized.url;
-      setGif(gif)
-      setLoading(false)
-    })
-  }, [id]);
-
-  if (loading)
-    return <Spinner />
-
-  return <div>
-      <Gif key={id} params={gif}></Gif>
-  </div>
-
-};
+  return (
+    <>
+      {gif === undefined ? (
+        <h1>No se encontró ningún gif</h1>
+      ) : (
+        <>
+          <Search />
+          <Gif id={gif.id} title={gif.title} url={gif.url} detalle={true} />
+        </>
+      )}
+    </>
+  );
+}

@@ -1,5 +1,10 @@
 .App-title {
-  color: #5a95a4;
+  color: #68eee7f3;
+  max-height: 10px;
+}
+
+.title-populares {
+  color: #f0f0f2f3;
   max-height: 10px;
 }
 
@@ -9,13 +14,15 @@
 }
 
 .btn-buscar {
-  height: 3vh;
-  border-radius: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  border-radius: 3px;
   margin-top: 10px;
-  font-size: 25px;
+  font-size: 20px;
   background-color: cadetblue;
-  text-decoration-style: wavy;
   color: white;
+  text-align: center;
 }
 
 .btn-buscar:hover {
@@ -24,16 +31,18 @@
 
 .input-keyword {
   height: 2vh;
-  border-radius: 3%;
   font-size: 15px;
-  text-decoration-style: wavy;
-
 }
 
 .popular-gifs {
-  color: rgb(130, 191, 199);
+  color: #90d4e9f3;
 }
 
 .popular-gifs-links {
-  color: rgb(128, 169, 202);
+  color: #90d4e9f3;
+}
+
+.form-keyword {
+  display: flex;
+  flex-direction: column;
 }
